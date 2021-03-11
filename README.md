@@ -10,4 +10,4 @@ We just see leagues or team details in this app.
 6. Minimum Responsive Large and mobile screen
 
 # Live Site
-# 
+# https://xenodochial-archimedes-e4cf50.netlify.app/
