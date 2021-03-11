@@ -84,13 +84,13 @@ const TeamDetails = () => {
             </main>
             <footer>
                 <div className="social-icons mb-4">
-                    <a className='text-info' target='_blank' href={'https://' + strTwitter}>
+                    <a className='text-info' target='blank' href={'https://' + strTwitter}>
                         {twitter}
                     </a>
-                    <a className='text-primary' target='_blank' href={'https://' + strFacebook}>
+                    <a className='text-primary' target='blank' href={'https://' + strFacebook}>
                         {facebook}
                     </a>
-                    <a className='text-danger' target='_blank' href={'https://' + strYoutube}>
+                    <a className='text-danger' target='blank' href={'https://' + strYoutube}>
                         {youtube}
                     </a>
                 </div>
