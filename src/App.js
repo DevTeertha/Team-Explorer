@@ -20,7 +20,7 @@ function App() {
             <Header></Header>
             <Teams></Teams>
           </Route>
-          <Route path='/:id'>
+          <Route path='/:leagues/:id'>
             <TeamDetails></TeamDetails>
           </Route>
           <Route path='*'>

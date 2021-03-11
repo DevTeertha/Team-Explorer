@@ -3,6 +3,8 @@ import { Button, Card } from 'react-bootstrap';
 import './TeamCard.css'
 import TeamDetails from '../TeamDetails/TeamDetails';
 import {Link} from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLongArrowAltRight } from '@fortawesome/free-solid-svg-icons';
 
 const TeamCard = (props) => {
     const { idLeague, strLeague, strSport, strTeamBadge, strLeagueAlternate } = props.team;
@@ -22,8 +24,8 @@ const TeamCard = (props) => {
                 <Card.Body>
                     <Card.Title className='card-title'>{strLeagueAlternate}</Card.Title>
                     <Card.Text className='text-center'>{strSport}</Card.Text>
-                    <Link to={`/${idLeague}`}>
-                        <Button className='w-100 font-weight-bold' variant="warning">Explore</Button>
+                    <Link to={`${strLeague}/${idLeague}`}>
+                        <Button className='w-100 font-weight-bold' variant="danger">Explore <FontAwesomeIcon icon={faLongArrowAltRight} /></Button>
                     </Link>
                 </Card.Body>
             </Card>

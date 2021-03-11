@@ -5,8 +5,9 @@ import cover from '../../dist/Cover/cover.png';
 import './TeamDetails.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
-import { faMapMarkerAlt, faFlag, faFutbol, faMars, faVenus } from '@fortawesome/free-solid-svg-icons'
-import { Link } from "react-router-dom";
+import { faMapMarkerAlt, faFlag, faFutbol, faMars, faVenus } from '@fortawesome/free-solid-svg-icons';
+import { Link , Route} from "react-router-dom";
+import NotFound from '../NotFound/NotFound';
 
 const TeamDetails = () => {
     const twitter = <FontAwesomeIcon icon={faTwitter} />
@@ -37,7 +38,6 @@ const TeamDetails = () => {
         strFanart1,
         strFanart4
     } = details;
-    console.log(details);
 
     useEffect(() => {
         const URL = `https://www.thesportsdb.com/api/v1/json/1/lookupleague.php?id=${id}`
@@ -58,28 +58,26 @@ const TeamDetails = () => {
                 <Link className='nav-menu-link' to='/'> Home</Link>
             </nav>
             <main>
-                <div className="details-card row my-4 bg-primary text-white">
-                    <div className="details-info col ml-3 mt-4">
+                <div className="details-card row my-4 bg-danger text-white">
+
+                    <div className="details-info col-lg-6 ml-3 mt-4">
                         <h1>{strLeagueAlternate}</h1>
                         <h5> {founded} Founded : {intFormedYear}</h5>
                         <h5> {flag} Country : {strCountry}</h5>
                         <h5> {sport} Sports Type : {strSport}</h5>
-                        <h5>   {strGender === 'Male' ?
+                        <h5> {strGender === 'Male' ?
                             <FontAwesomeIcon icon={faMars} />
                             :
                             <FontAwesomeIcon icon={faVenus} />
                         } Gender : {strGender}</h5>
                     </div>
 
-
                     <div className="details-img col">
-
                         {strGender === 'Male' ?
                             <img src={strFanart4} alt="Thumbnail" />
                             :
                             <img src={strFanart1} alt="Thumbnail" />
                         }
-
                     </div>
                 </div>
                 <div className="details-description">
