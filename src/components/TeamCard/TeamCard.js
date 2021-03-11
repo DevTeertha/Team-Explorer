@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Card } from 'react-bootstrap';
 import './TeamCard.css'
-import TeamDetails from '../TeamDetails/TeamDetails';
 import {Link} from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLongArrowAltRight } from '@fortawesome/free-solid-svg-icons';
 
 const TeamCard = (props) => {
-    const { idLeague, strLeague, strSport, strTeamBadge, strLeagueAlternate } = props.team;
+    const { idLeague, strLeague, strSport, strLeagueAlternate } = props.team;
     const [logo,setLogo] = useState({});
     const {strBadge} = logo;
 

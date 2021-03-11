@@ -6,8 +6,7 @@ import './TeamDetails.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { faMapMarkerAlt, faFlag, faFutbol, faMars, faVenus } from '@fortawesome/free-solid-svg-icons';
-import { Link , Route} from "react-router-dom";
-import NotFound from '../NotFound/NotFound';
+import { Link } from "react-router-dom";
 
 const TeamDetails = () => {
     const twitter = <FontAwesomeIcon icon={faTwitter} />
