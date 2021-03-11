@@ -20,9 +20,7 @@ const TeamDetails = () => {
     const { id } = useParams();
     const [details, setDetails] = useState({});
     const {
-        idLeague,
         strSport,
-        strLeague,
         strLeagueAlternate,
         strCountry,
         intFormedYear,
@@ -32,7 +30,6 @@ const TeamDetails = () => {
         strYoutube,
         strDescriptionEN,
         strDescriptionHU,
-        strBanner,
         strLogo,
         strFanart1,
         strFanart4
